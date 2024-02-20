@@ -38,8 +38,23 @@ function App4() {
     return "Wczytywanie danych";
   }
 
+  if(data.current.temperature_2m <= -10){
+    alert("ale pizga")
+  }
+
+  let color = "white";
+  if(data.current.temperature_2m >= 10){
+    color = "darkred"
+  }else if(data.current.temperature_2m >= 0){
+    color = "red"
+  }else if(data.current.temperature_2m > -10){
+    color = "blue"
+  }else{
+    color = "darkblue"
+  }
+
   return (
-    <div style={ {height:"100vh", backgroundColor: "red"} }>
+    <div style={ {height:"100vh", backgroundColor: color} }>
       <input
         value={latitude}
         type="number"
