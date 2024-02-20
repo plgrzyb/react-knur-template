@@ -1,11 +1,14 @@
-import { Button } from "./components/button/Button";
-import "./index.css";
-
+import { useState } from 'react'
 function App() {
+  const [licznik, setLicznik] = useState(0)
+  function licz(){
+    setLicznik((aktualnaWartosc) => {return aktualnaWartosc + 1})
+  }
   return (
     <>
-      <h1>KNUR + REACT</h1>
-      <Button name="click!" />
+      <p>{licznik}</p>
+      <button onClick={licz}>Dodaj</button>
+      <h1>KNURCAMP ELO</h1>
     </>
   );
 }

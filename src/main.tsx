@@ -1,7 +1,8 @@
 import ReactDOM from "react-dom/client";
-import { App } from "./App.js";
+import "./index.css"
+import { App4 } from "./App4";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App4 />);
 
 /*
 nie używamy tutaj strict mode, ale jakby ktoś chciał poczytać to:
